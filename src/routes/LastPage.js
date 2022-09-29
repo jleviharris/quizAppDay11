@@ -14,7 +14,6 @@ const LastPage = ({ grade, numCorrect }) => {
   };
   const NavToAnswers = () => {
     navigate("/answers");
-    refreshPage();
   };
 
   return (
