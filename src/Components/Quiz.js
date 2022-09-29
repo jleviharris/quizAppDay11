@@ -2,13 +2,17 @@ import React, { useState } from "react";
 import Question from "./Question";
 import Answer from "./Answer";
 
-const Quiz = ({ grade, setGrade }) => {
-  const [numCorrect, setNumCorrect] = useState(0);
-  const [questionNum, setQuestionNum] = useState(0);
-
+const Quiz = ({
+  grade,
+  setGrade,
+  numCorrect,
+  setNumCorrect,
+  questionNum,
+  setQuestionNum,
+}) => {
   return (
     <div className="quiz">
-    
+      <h1>Die Maschine Quiz</h1>
       <Question questionNum={questionNum} />
       <Answer
         questionNum={questionNum}

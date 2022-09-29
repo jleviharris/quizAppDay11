@@ -7,11 +7,25 @@ import LastPage from "./routes/LastPage";
 
 function App() {
   const [grade, setGrade] = useState(0);
+  const [numCorrect, setNumCorrect] = useState(0);
+  const [questionNum, setQuestionNum] = useState(0);
   return (
     <div className="App">
-      <h1>Die Maschine Quiz</h1>
+    
       <Routes>
-        <Route path="/" element={<Quiz grade={grade} setGrade={setGrade} />} />
+        <Route
+          path="/"
+          element={
+            <Quiz
+              grade={grade}
+              setGrade={setGrade}
+              questionNum={questionNum}
+              setQuestionNum={setQuestionNum}
+              numCorrect={numCorrect}
+              setNumCorrect={setNumCorrect}
+            />
+          }
+        />
         <Route path="/grade" element={<LastPage grade={grade} />} />
       </Routes>
     </div>
