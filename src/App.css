@@ -53,11 +53,11 @@ html {
   justify-content: center;
 }
 .score {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   margin: 1rem;
 }
 .reset {
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin: 1rem;
 }
 .lastPage {
@@ -65,6 +65,15 @@ html {
   border-radius: 8px;
   border: 1px solid black;
   box-shadow: 0px 0px 12px #18191b;
+  display: flex;
+  flex-direction: column;
+}
+.answersBtn {
+  margin: 1rem;
+}
+.ratio {
+  font-size: 1rem;
+  margin: 1rem;
 }
 @media screen and (max-width: 700px) {
   .quiz {

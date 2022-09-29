@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import React, { useState } from "react";
 import Quiz from "./Components/Quiz";
 import LastPage from "./routes/LastPage";
+import AnswersPage from "./routes/AnswersPage";
 
 function App() {
   const [grade, setGrade] = useState(0);
@@ -11,7 +12,6 @@ function App() {
   const [questionNum, setQuestionNum] = useState(0);
   return (
     <div className="App">
-    
       <Routes>
         <Route
           path="/"
@@ -26,7 +26,11 @@ function App() {
             />
           }
         />
-        <Route path="/grade" element={<LastPage grade={grade} />} />
+        <Route
+          path="/grade"
+          element={<LastPage grade={grade} numCorrect={numCorrect} />}
+        />
+        <Route path="/answers" element={<AnswersPage />} />
       </Routes>
     </div>
   );

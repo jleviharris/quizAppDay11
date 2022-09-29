@@ -1,7 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import data from "../Data/data";
 
-const LastPage = ({ grade }) => {
+const LastPage = ({ grade, numCorrect }) => {
   let navigate = useNavigate();
 
   function refreshPage() {
@@ -11,12 +12,24 @@ const LastPage = ({ grade }) => {
     navigate("/");
     refreshPage();
   };
+  const NavToAnswers = () => {
+    navigate("/answers");
+    refreshPage();
+  };
 
   return (
     <div className="lastPage">
-      <div className="score"> Your Score: {grade}%</div>
+      <div className="ratio">
+        {" "}
+        {numCorrect} out of {data.length}
+      </div>
+
+      <div className="score">{grade}%</div>
       <button className="reset" onClick={Reset}>
         Reset
+      </button>
+      <button className="answersBtn" onClick={NavToAnswers}>
+        See Answers
       </button>
     </div>
   );
