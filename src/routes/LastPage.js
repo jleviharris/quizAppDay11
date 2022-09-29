@@ -26,7 +26,7 @@ const LastPage = ({ grade, numCorrect }) => {
 
       <div className="score">{grade}%</div>
       <button className="reset" onClick={Reset}>
-        Reset
+        Retake
       </button>
       <button className="answersBtn" onClick={NavToAnswers}>
         See Answers

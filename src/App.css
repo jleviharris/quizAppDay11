@@ -30,6 +30,7 @@ html {
 }
 .question {
   font-size: 1.5rem;
+  margin: 1rem;
 }
 .answerBtn {
   margin: 1rem;
@@ -71,6 +72,24 @@ html {
 .answersBtn {
   margin: 1rem;
 }
+.answersPage {
+  font-size: 2rem;
+  background: whitesmoke;
+  border: 2px solid black;
+  box-shadow: 0px 0px 12px #18191b;
+}
+.APGroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 0.5px solid gray;
+}
+.APQuestion {
+  margin: 1rem;
+}
+.APAnswer {
+  margin: 1rem;
+}
 .ratio {
   font-size: 1rem;
   margin: 1rem;
@@ -78,5 +97,8 @@ html {
 @media screen and (max-width: 700px) {
   .quiz {
     width: auto;
+  }
+  .answersPage {
+    font-size: 0.75rem;
   }
 }
